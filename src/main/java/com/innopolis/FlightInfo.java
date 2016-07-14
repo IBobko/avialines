@@ -4,7 +4,9 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 
 /**
- * @author Igor Bobko <limit-speed@yandex.ru>.
+ * This class exists for one line of all flights. It exists for simple searching flights. In choosing step we must return list of this class.
+ *
+ * @author Igor Bobko "limit-speed@yandex.ru".
  */
 public class FlightInfo {
     private String flight;

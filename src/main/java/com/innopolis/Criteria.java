@@ -3,7 +3,10 @@ package com.innopolis;
 import java.util.Date;
 
 /**
- * @author Igor Bobko <limit-speed@yandex.ru>.
+ * This class is designed for the aggregation of search options such as tickets, direction, date, type of class and the number of passengers.
+ * It is simple POJO Object.
+ *
+ * @author Igor Bobko "limit-speed@yandex.ru".
  */
 
 public class Criteria {
@@ -11,9 +14,27 @@ public class Criteria {
     private String to;
     private Date when;
     private Integer countOfPassengers;
-    private Integer economy;
+    private AviaClass aviaClass;
     private Integer returnTicket;
 
+    /**
+     * Returns the class type which the user plans to fly
+     *
+     * @return
+     */
+    public AviaClass getAviaClass() {
+        return aviaClass;
+    }
+
+    public void setAviaClass(AviaClass aviaClass) {
+        this.aviaClass = aviaClass;
+    }
+
+    /**
+     * Returns the Location from which the user plans to fly
+     *
+     * @return
+     */
     public String getFrom() {
         return from;
     }
@@ -22,6 +43,11 @@ public class Criteria {
         this.from = from;
     }
 
+    /**
+     * Returns the Location to which the user plans to fly
+     *
+     * @return
+     */
     public String getTo() {
         return to;
     }
@@ -30,6 +56,11 @@ public class Criteria {
         this.to = to;
     }
 
+    /**
+     * Returns the Date when the user plans to fly
+     *
+     * @return
+     */
     public Date getWhen() {
         return when;
     }
@@ -38,6 +69,11 @@ public class Criteria {
         this.when = when;
     }
 
+    /**
+     * Returns amount of passengers the user plans to fly
+     *
+     * @return
+     */
     public Integer getCountOfPassengers() {
         return countOfPassengers;
     }
@@ -46,14 +82,11 @@ public class Criteria {
         this.countOfPassengers = countOfPassengers;
     }
 
-    public Integer getEconomy() {
-        return economy;
-    }
-
-    public void setEconomy(Integer economy) {
-        this.economy = economy;
-    }
-
+    /**
+     * Returns if the user plans to come
+     *
+     * @return
+     */
     public Integer getReturnTicket() {
         return returnTicket;
     }
@@ -69,7 +102,7 @@ public class Criteria {
                 ", to='" + to + '\'' +
                 ", when=" + when +
                 ", countOfPassengers=" + countOfPassengers +
-                ", economy=" + economy +
+                ", aviaClass=" + aviaClass +
                 ", returnTicket=" + returnTicket +
                 '}';
     }

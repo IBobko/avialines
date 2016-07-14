@@ -4,6 +4,23 @@ package com.innopolis;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * In this class are described all bussines logic and all steps of the application.
+ *
+ * We stores data about flights in json Files.
+ * JSON has next format
+ *
+ * {
+ * "Flight": "99A33",
+ * "Dep": "LGW",
+ * "ArrDep.": "DMD",
+ * "TimeArr": "12.07.2016 14:15",
+ * "Time": "12.07.2016 12:15",
+ * "Cost": "123.443",
+ * "NumberOfFreePlaces": "20"
+ * }
+
+ */
 class Application
 {
     public static void main(String[] arr) {
